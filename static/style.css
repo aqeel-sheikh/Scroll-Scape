@@ -15,11 +15,6 @@
   margin: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  html {
-    interpolate-size: allow-keywords;
-  }
-}
 
 body {
   line-height: 1.5;
@@ -135,12 +130,6 @@ header {
   animation-range: entry 100% exit 30%;
 }
 
-@keyframes fadeOutLinks {
-  to {
-    opacity: 0;
-  }
-}
-
 .social-links img {
   width: 24px;
 }
@@ -174,35 +163,6 @@ header {
   bottom: 0;
   right: 0;
 }
-@keyframes vibrate {
-  to {
-    transform: scale(1.03) translateX(10px);
-  }
-}
 
-@media (max-width: 780px) {
-  nav p {
-    text-align: center;
-  }
-  #header-title,
-  #header-tagline {
-    padding: 0 30px 0 30px;
-  }
-  .social-links {
-    left: auto;
-  }
-  #lottie-container {
-    height: 30px;
-    padding: 0;
-  }
-  #header-tagline {
-    transform: translateY(220px);
-  }
-}
 
-@media (max-width: 480px){
-  .the-beginning-title{
-    font-size: 2rem;
-    padding-left: 20px;
-  }
-}
+

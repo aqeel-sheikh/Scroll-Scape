@@ -1,0 +1,32 @@
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    interpolate-size: allow-keywords;
+  }
+}
+
+@media (max-width: 780px) {
+  nav p {
+    text-align: center;
+  }
+  #header-title,
+  #header-tagline {
+    padding: 0 30px 0 30px;
+  }
+  .social-links {
+    left: auto;
+  }
+  #lottie-container {
+    height: 30px;
+    padding: 0;
+  }
+  #header-tagline {
+    transform: translateY(220px);
+  }
+}
+
+@media (max-width: 480px){
+  .the-beginning-title{
+    font-size: 2rem;
+    padding-left: 20px;
+  }
+}

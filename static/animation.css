@@ -1,0 +1,11 @@
+@keyframes fadeOutLinks {
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes vibrate {
+  to {
+    transform: scale(1.03) translateX(10px);
+  }
+}
