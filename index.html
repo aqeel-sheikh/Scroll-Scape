@@ -4,44 +4,56 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="static/style.css" />
-    <link rel="stylesheet" href="static/responsive.css">
-    <link rel="stylesheet" href="static/animation.css">
+    <link rel="stylesheet" href="static/responsive.css" />
+    <link rel="stylesheet" href="static/animation.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.10.2/lottie.min.js"></script>
     <title>Scroll Scape</title>
   </head>
   <body>
-    <header>
+    <header class="section" id="section1">
       <p id="logo">SCROLL SCAPE</p>
-      <h1 id="header-title" class="title">WELCOME TO MY WEB DEV JOURNEY</h1>
-      <p id="header-tagline">
+      <h1 id="section1-title" class="title">WELCOME TO MY WEB DEV JOURNEY</h1>
+      <p id="section1-tagline">
         A scroll through my journey — Not perfect, not finished, but this is
         where it begins.
       </p>
       <div id="lottie-container"></div>
       <div class="social-links">
-        <a href="#">
+        <a href="https://x.com/aqeell_sheikh">
           <img
             src="static/images/social/twitter-x.svg"
             alt="X (formely twitter)"
           />
         </a>
-        <a href="#">
-          <img src="static/images/social/gmail.svg" alt="Gmail" />
-        </a>
-        <a href="#">
+        <a href="https://github.com/aqeel-sheikh/">
           <img src="static/images/social/github.svg" alt="Github" />
+        </a>
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=sheikhakeelw01@gmail.com&su=Opportunity%20to%20Collaborate%20%2F%20Hire&body=Hello%20Aqeel,%0D%0A%0D%0AI%20came%20across%20your%20profile%20and%20I%20am%20interested%20in%20discussing%20a%20potential%20opportunity%20with%20you.%0D%0A%0D%0APlease%20let%20me%20know%20a%20convenient%20time%20to%20connect.%0D%0A%0D%0AThank%20you,%0D%0A[Your%20Name]%0D%0A[Your%20Company/Organization]" target="_blank">
+          <img src="static/images/social/gmail.svg" alt="Gmail" />
         </a>
       </div>
     </header>
-    <section class="the-beginning-section">
-      <h1 class="the-beginning-title title">THE BEGINNING</h1>
-      <div class="sky">
-        <img src="static/images/main/cloud.png" alt="cloud" class="cloud" />
+
+    <section class="section" id="section2">
+      <h1 class="title" id="section2-title">THE BEGINNING</h1>
+      <div class="lines">
+        <div class="line line1"></div>
+        <div class="line line2"></div>
+      </div>
+      <div id="section2-content">
+        <p id="section2-content-text">
+          I didn't know where it would lead — I just started. A few lines of
+          code, a little patience, and the journey was set in motion.
+        </p>
       </div>
       <div class="sky-bg"></div>
     </section>
-    <div style="height: 100vh; background-color: #8b8585;"></div>
+
+    <div style="height: 100vh" class="section">
+      <div class="test"></div>
+    </div>
     <script src="js/script.js"></script>
     <script src="js/lottie.js"></script>
+    <script src="js/animation.js"></script>
   </body>
 </html>

@@ -1,5 +1,5 @@
-const headerTitle = document.querySelector("#header-title");
-const headerTagLine = document.querySelector("#header-tagline");
+const headerTitle = document.querySelector("#section1-title");
+const headerTagLine = document.querySelector("#section1-tagline");
 const socialLinks = document.querySelectorAll(".social-links a");
 const rocket = document.querySelector(".rocket")
 

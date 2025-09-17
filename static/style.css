@@ -15,7 +15,6 @@
   margin: 0;
 }
 
-
 body {
   line-height: 1.5;
   overflow-x: hidden;
@@ -66,7 +65,7 @@ h6 {
 #__next {
   isolation: isolate;
 }
-
+/* Header / Section 1 */
 #logo {
   font-family: poppins;
   font-size: 1.5rem;
@@ -83,7 +82,7 @@ header {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  overflow: hidden;
+  /* overflow: hidden; */
 
   view-timeline-name: --headerView;
   view-timeline-axis: block;
@@ -96,22 +95,31 @@ header {
   width: 150px;
   height: 50px;
 }
-.title{
-  position: absolute;
+.title {
   font-family: poppins;
   font-size: 3rem;
   font-weight: 700;
-  text-shadow: 2px 4px 4px rgba(0, 0, 0, 0.2);
   z-index: 1;
+  text-shadow: 2px 4px 4px rgba(0, 0, 0, 0.2);
   color: #f6fbfc;
 }
-
-#header-tagline {
+#section1-title{
+  position: absolute;
+}
+#section1-tagline {
   position: absolute;
   font-family: poppins;
   color: #919596;
   text-shadow: 2px 4px 4px rgba(0, 0, 0, 0.2);
   transform: translateY(50px);
+  z-index: -1;
+
+  animation-name: fadeOutLinks;
+  animation-timeline: --headerView;
+  animation-timing-function: linear;
+  animation-duration: 1ms;
+  animation-fill-mode: forwards;
+  animation-range: entry 100% exit 70%;
 }
 .social-links {
   position: absolute;
@@ -133,36 +141,105 @@ header {
 .social-links img {
   width: 24px;
 }
-/* Section 1 */
-.the-beginning-section {
-  position: relative;
-  z-index: 2;
-  padding: 30px;
+/* Section 2 */
+#section2 {
   width: 100%;
   height: 100vh;
-  overflow: hidden;
-  
-  border: 1px solid;
+  padding: 30px;
   display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 2;
+
+  background: url(./images/section2/cloud.png) repeat-x;
+  background-position: 0 bottom;
+  background-size: auto 350px;
+  animation: moveBg 100s linear infinite;
 }
 
-.cloud {
+#section2-title{
+  align-self: flex-start;
+  margin-bottom: auto;
+  text-shadow: 2px 4px 4px rgba(0, 0, 0, 0.5);
+
+  animation: appear 1ms linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
+}
+
+#section2-content {
+  max-width: 50vw;
+  align-self: flex-end;
+  margin-bottom: 40vh;
+  margin-right: 2vw;
+
+  animation: TextAppear both;
+  animation-timeline: view();
+  animation-range: entry 20% cover 30%;
+}
+
+#section2-content-text {
+  font-family: poppins;
+  color: #646464;
+  font-weight: 500;
+  font-size: 1.2rem;
+  text-shadow: 2px 4px 4px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
+
+  background-color: #ffffff;
+  border-radius: 7px;
+  padding: 1rem;
+}
+
+#section2-content-text::after {
+  content: "";
   position: absolute;
-  bottom: 0;
+  inset: -2px;
+  background: conic-gradient(
+    from var(--angle),
+    #ffffff,
+    #7a7a7a,
+    #ffffff
+  );
+  border-radius: 7px;
+  z-index: -1;
+  animation: movingBorder 3s linear infinite;
+}
+.line{
+  height: 100px;
+  position: relative;
+}
+.line1{
+  transform: translateX(-310px);
+}
+.line2{
+  transform: translateY(-10px);
+}
+.line::after{
+  content: "";
+  position: absolute;
   left: 0;
-  object-fit: contain;
-  z-index: 1;
-  animation: vibrate 2s infinite linear alternate forwards;
+  width: 2px;
 }
-
-.sky-bg {
-  width: 100vw;
-  position: absolute;
-  height: 10px;
-  background: #fff;
+.line1::after{
+  top: 0;
+  background: red;
+  animation: lineGrowDown linear both;
+  animation-range: entry 0% cover 50%;
+  animation-timeline: view();
+}
+.line2::after{
   bottom: 0;
-  right: 0;
+  background: blue;
+  animation: lineGrowUp linear both;
+  animation-range: entry 0% cover 50%;
+  animation-timeline: view();
 }
 
+.test {
+  height: 100px;
+  width: 200px;
 
-
+  position: absolute;
+}
