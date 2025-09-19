@@ -98,43 +98,28 @@ h6 {
   animation-range: entry 0% cover 40%;
 }
 .title {
+  font-size: 3rem;
+  font-weight: 700;
+  z-index: 1;
+  color: #f6fbfc;
   text-shadow: 2px 4px 4px rgba(0, 0, 0, 0.5);
 }
 /* the narrative card */
 .narrative-card {
   max-width: 520px;
-  background: rgba(6, 12, 30, 1);
-  box-shadow: 2px 4px 4px rgba(2, 6, 20, 0.6);
   line-height: 1.6;
+  position: absolute;
   letter-spacing: 0.1px;
   align-self: flex-end;
 
-  position: absolute;
-  bottom: 15%;
   right: 5vw;
-
+  bottom: 15%;
+  border-radius: 7px;
   animation: TextAppear both;
   animation-timeline: view();
   animation-range: entry 20% cover 30%;
 }
-.narrative-card-text {
-  padding: 1rem;
-  color: #000000;
-  font-size: 1.2rem;
-  border-radius: 7px;
-  background-color: #ffffff;
-  text-shadow: 2px 4px 4px rgba(0, 0, 0, 0.2);
-  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
-}
-.narrative-card-text::after {
-  content: "";
-  position: absolute;
-  inset: -2px;
-  background: conic-gradient(from var(--angle), #ffffff, #000000, #ffffff);
-  border-radius: 7px;
-  z-index: -1;
-  animation: movingBorder 3s linear infinite;
-}
+
 /* Header / Section 1 */
 #logo {
   font-family: poppins;
@@ -161,14 +146,7 @@ header {
   width: 150px;
   height: 50px;
 }
-.title {
-  font-family: poppins;
-  font-size: 3rem;
-  font-weight: 700;
-  z-index: 1;
-  text-shadow: 2px 4px 4px rgba(0, 0, 0, 0.2);
-  color: #f6fbfc;
-}
+
 #section1-title {
   position: absolute;
 }
@@ -219,6 +197,22 @@ header {
   animation-fill-mode: none, both;
   animation-timeline: auto, view();
   animation-range: normal, entry 100% cover 90%;
+}
+#section2-narrative-card-text {
+  padding: 1rem;
+  font-size: 1.2rem;
+  border-radius: 7px;
+  border : 1px solid rgba(0, 0, 0, 0.1);
+  text-shadow: 2px 4px 4px rgb(255, 255, 255);
+}
+#section2-narrative-card-text::after {
+  content: "";
+  inset: -1px;
+  z-index: -1;
+  border-radius: 7px;
+  position: absolute;
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 #section2-narrative-card {
   position: absolute;
@@ -487,3 +481,5 @@ header {
   animation: stairFloaty 2s ease-in-out alternate infinite;
   animation-delay: 16s;
 }
+
+
