@@ -208,7 +208,7 @@ header {
 }
 /* Section 2 */
 #section2 {
-  /* background: url(./images/section2/cloud.png) repeat-x; */
+  background: url(./images/section2/cloud.png) repeat-x;
   background-position: 0 bottom;
   background-size: auto 350px;
 
@@ -223,7 +223,7 @@ header {
 #section2-narrative-card {
   position: absolute;
   right: 10%;
-  bottom: 25%;
+  bottom: 15%;
 }
 .decoration-line {
   height: 100px;
@@ -233,7 +233,7 @@ header {
   transform: translateX(-310px) translateY(-150px);
 }
 .decoration-line-blue {
-  transform: translateX(50px) translateY(-45px);
+  transform: translateX(50px) translateY(-40px);
 }
 .decoration-line::after {
   content: "";
@@ -271,7 +271,7 @@ header {
   animation-range: entry 0% cover 30%;
 }
 
-/* #section3::after {
+#section3::after {
   content: "";
   position: absolute;
   top: 0;
@@ -280,8 +280,8 @@ header {
   height: 100%;
   background: linear-gradient(
     135deg,
-    rgba(0, 10, 30, 0.6),
-    rgba(0, 0, 30, 0.8),
+    rgba(0, 0, 0, 0.719),
+    rgba(42, 42, 61, 0.8),
     rgba(0, 0, 0, 0.9)
   );
 
@@ -290,8 +290,8 @@ header {
   animation: gradientShift 15s ease-in-out infinite;
 
   pointer-events: none;
-  z-index: 1;
-} */
+  z-index: -1;
+}
 #section3-content {
   position: absolute;
   padding: 30px;
@@ -412,7 +412,78 @@ header {
 
 /* Section 4 - The Rise */
 
-#section4-tagline {
-  color: #5c5c5c;
-  text-shadow: 2px 4px 4px rgba(0, 0, 0, 0.2);
+.section4-tagline {
+  color: #7e7c7c;
+  text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.2);
+  transform: translateY(80px);
+  line-height: 2;
+  font-family: monospace;
+}
+.section4-tagline1{
+  transform: translateY(60px);
+}
+.section4-tagline2{
+  transform: translateX(250px) translateY(215px);
+}
+.section4-tagline3{
+  transform: translateY(300px);
+}
+
+#section4 .card{
+  color: #000000;
+  right: 0;
+  /* animation: stairFloaty 2s ease-in-out alternate infinite; */
+}
+.Rcard1{
+  bottom: 5%;
+  left: 3%;
+  animation: stairFloaty 2s ease-in-out alternate infinite;
+}
+.Rcard2{
+  bottom: 12%;
+  left: 13%;
+  animation: stairFloaty 2s ease-in-out alternate infinite;
+  animation-delay: 2s;
+}
+.Rcard3{
+  bottom: 20%;
+  left: 20%;
+  animation: stairFloaty 2s ease-in-out alternate infinite;
+  animation-delay: 4s;
+}
+.Rcard4{
+  bottom: 29%;
+  left: 31%;
+  animation: stairFloaty 2s ease-in-out alternate infinite;
+  animation-delay: 6s;
+}
+.Rcard5{
+  bottom: 37%;
+  left: 44%;
+  animation: stairFloaty 2s ease-in-out alternate infinite;
+  animation-delay: 8s;
+}
+.Rcard6{
+  bottom: 45%;
+  left: 36%;
+  animation: stairFloaty 2s ease-in-out alternate infinite;
+  animation-delay: 10s;
+}
+.Rcard7{
+  bottom: 55%;
+  left: 28%;
+  animation: stairFloaty 2s ease-in-out alternate infinite;
+  animation-delay: 12s;
+}
+.Rcard8{
+  bottom: 65%;
+  left: 20%;
+  animation: stairFloaty 2s ease-in-out alternate infinite;
+  animation-delay: 14s;
+}
+.Rcard9{
+  bottom: 75%;
+  left: 9%;
+  animation: stairFloaty 2s ease-in-out alternate infinite;
+  animation-delay: 16s;
 }

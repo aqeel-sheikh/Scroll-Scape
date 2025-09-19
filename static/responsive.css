@@ -15,7 +15,10 @@
   }
   .card {
     display: none;
-  } /* hide on mobile for simplicity */
+  } 
+  .section4-tagline {
+  transform: none;
+}
 }
 
 @media (max-width: 780px) {
@@ -52,6 +55,6 @@
     transform: translateX(90px) translateY(-250px);
   }
   .decoration-line-blue{
-    transform: translateX(-110px) translateY(-5px);
+    transform: translateX(-110px) translateY(20px);
   }
 }

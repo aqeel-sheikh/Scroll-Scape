@@ -68,42 +68,41 @@
   }
 }
 
-@keyframes lineGrowDown{
-  from{
+@keyframes lineGrowDown {
+  from {
     height: 0px;
   }
-  to{
+  to {
     height: 100%;
   }
 }
-@keyframes lineGrowUp{
-  from{
+@keyframes lineGrowUp {
+  from {
     height: 36%;
   }
-  to{
+  to {
     height: 100%;
   }
 }
 
-@keyframes fadeOut{
-  from{
+@keyframes fadeOut {
+  from {
     filter: opacity(1);
   }
-  to{
+  to {
     filter: opacity(0);
   }
 }
-@keyframes fadeIn{
-  from{
+@keyframes fadeIn {
+  from {
     opacity: 0;
   }
-  to{
+  to {
     opacity: 1;
   }
 }
 
-
-@keyframes gradientShift{
+@keyframes gradientShift {
   0% {
     background-position: 0% 50%;
   }
@@ -124,5 +123,14 @@
   }
   100% {
     transform: translateY(-20px);
+  }
+}
+
+@keyframes stairFloaty {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-10px);
   }
 }
