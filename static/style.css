@@ -5,6 +5,15 @@
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: "orbitron";
+  src: url("./fonts/orbitron/orbitron-variablefont_wght-webfont.woff2")
+      format("woff2"),
+    url("./fonts/orbitron/orbitron-variablefont_wght-webfont.woff")
+      format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
 *,
 *::before,
 *::after {
@@ -76,13 +85,15 @@ h6 {
   padding: 30px;
   text-shadow: 2px 4px 4px rgba(0, 0, 0, 0.2);
 }
-header {
-  position: relative;
+.section {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
   height: 100vh;
-  /* overflow: hidden; */
+}
+header {
+  position: relative;
 
   view-timeline-name: --headerView;
   view-timeline-axis: block;
@@ -103,7 +114,7 @@ header {
   text-shadow: 2px 4px 4px rgba(0, 0, 0, 0.2);
   color: #f6fbfc;
 }
-#section1-title{
+#section1-title {
   position: absolute;
 }
 #section1-tagline {
@@ -143,22 +154,24 @@ header {
 }
 /* Section 2 */
 #section2 {
-  width: 100%;
-  height: 100vh;
   padding: 30px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
   z-index: 2;
 
   background: url(./images/section2/cloud.png) repeat-x;
   background-position: 0 bottom;
   background-size: auto 350px;
-  animation: moveBg 100s linear infinite;
-}
 
-#section2-title{
+  animation-name: moveBg, fadeOut;
+  animation-duration: 100s, 1s;
+  animation-timing-function: linear, linear;
+  animation-iteration-count: infinite, 1;
+  animation-fill-mode: none, both;
+  animation-timeline: auto, view();
+  animation-range: normal, entry 100% cover 90%;
+}
+#section2-title,
+#section3-heading {
   align-self: flex-start;
   margin-bottom: auto;
   text-shadow: 2px 4px 4px rgba(0, 0, 0, 0.5);
@@ -196,40 +209,35 @@ header {
   content: "";
   position: absolute;
   inset: -2px;
-  background: conic-gradient(
-    from var(--angle),
-    #ffffff,
-    #7a7a7a,
-    #ffffff
-  );
+  background: conic-gradient(from var(--angle), #ffffff, #7a7a7a, #ffffff);
   border-radius: 7px;
   z-index: -1;
   animation: movingBorder 3s linear infinite;
 }
-.line{
+.line {
   height: 100px;
   position: relative;
 }
-.line1{
+.line1 {
   transform: translateX(-310px);
 }
-.line2{
+.line2 {
   transform: translateY(-10px);
 }
-.line::after{
+.line::after {
   content: "";
   position: absolute;
   left: 0;
   width: 2px;
 }
-.line1::after{
+.line1::after {
   top: 0;
   background: red;
   animation: lineGrowDown linear both;
   animation-range: entry 0% cover 50%;
   animation-timeline: view();
 }
-.line2::after{
+.line2::after {
   bottom: 0;
   background: blue;
   animation: lineGrowUp linear both;
@@ -237,9 +245,200 @@ header {
   animation-timeline: view();
 }
 
-.test {
-  height: 100px;
-  width: 200px;
+/* Section 3 - The Struggles */
+#section3 {
+  position: relative;
+  color: #fff;
+
+  background: url(./images/section3/background.jpg) no-repeat;
+
+  background-position: bottom;
+  background-size: cover;
+  animation: fadeIn linear both;
+  animation-timeline: view();
+  animation-range: entry 0% cover 30%;
+}
+
+#section3::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    135deg,
+    rgba(0, 10, 30, 0.6),
+    rgba(0, 0, 30, 0.8),
+    rgba(0, 0, 0, 0.9)
+  );
+
+  background-size: 200% 200%;
+
+  animation: gradientShift 15s ease-in-out infinite;
+
+  pointer-events: none;
+  z-index: 1;
+}
+#section3-content {
+  position: absolute;
+  padding: 30px;
+  height: 100%;
+  width: 100%;
+  z-index: 2;
+}
+#section3-title {
+  color: #fff;
+  text-shadow: 2px 4px 2px #ffffff50;
+}
+#section3-heading {
+  position: relative;
+}
+#section3-tagline {
+  position: absolute;
+  font-family: monospace;
+  letter-spacing: 1px;
+  color: #ffffff;
+}
+
+/* the narrative card */
+.narrative-card {
+  max-width: 520px;
+  background: rgba(6, 12, 30, 1);
+  box-shadow: 2px 4px 4px rgba(2, 6, 20, 0.6);
+  font-family: "Poppins", system-ui, sans-serif;
+  line-height: 1.6;
+  letter-spacing: 0.1px;
+  align-self: flex-end;
 
   position: absolute;
+  bottom: 15%;
+  right: 5vw;
+
+  animation: TextAppear both;
+  animation-timeline: view();
+  animation-range: entry 20% cover 30%;
 }
+
+/* narrative text styling */
+.narrative-line {
+  background: rgba(6, 12, 30, 1);
+  border-radius: 12px;
+  /* margin: 0 0 0.8rem 0; */
+  font-size: 1.05rem;
+  color: #eef5ff;
+  font-weight: 400;
+  padding: 28px 30px;
+}
+.narrative-line1::after {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  background: conic-gradient(from var(--angle), #d1afaf, #7a7a7a, #d6baba);
+  z-index: -1;
+  border-radius: 12px;
+  animation: movingBorder 3s linear infinite;
+}
+.narrative-card .narrative-line span.narrative-title{
+  font-weight: 600;
+  font-size: 1.12rem;
+}
+
+
+.card {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.04),
+    rgba(255, 255, 255, 0.02)
+  );
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  color: #bfe1ff;
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-size: 0.92rem;
+  width: max-content;
+  box-shadow: 0 6px 4px rgba(8, 14, 30, 0.5);
+  transform: translateY(0);
+  position: absolute;
+
+  animation: floaty 2s ease-in-out infinite alternate;
+}
+
+.card1 {
+  right: 10%;
+  animation: floaty 2s ease-in infinite alternate;
+}
+.card2 {
+  right: 40%;
+  top: 20%;
+  animation: floaty 2s ease-out infinite alternate-reverse;
+}
+.card3 {
+  top: 30%;
+  right: 25%;
+  animation: floaty 2s ease-in-out infinite alternate;
+}
+.card4 {
+  top: 40%;
+  animation: floaty 2s linear infinite alternate-reverse;
+}
+.card5 {
+  top: 60%;
+  left: 5%;
+  animation: floaty 2s cubic-bezier(0.25, 0.1, 0.25, 1) infinite alternate;
+}
+.card6 {
+  top: 30%;
+  left: 25%;
+  animation: floaty 2s cubic-bezier(0.42, 0, 0.58, 1) infinite alternate;
+}
+.card7 {
+  top: 45%;
+  left: 18%;
+  animation: floaty 2s cubic-bezier(0.33, 1, 0.68, 1) infinite alternate-reverse;
+}
+.card8 {
+  top: 80%;
+  animation: floaty 2s cubic-bezier(0.55, 0.055, 0.675, 0.19) infinite alternate-reverse;
+}
+.card9 {
+  top: 60%;
+  left: 25%;
+  animation: floaty 2s cubic-bezier(0.215, 0.61, 0.355, 1) infinite alternate;
+}
+.card10{
+  top: 35%;
+  left: 35%;
+  animation: floaty 2s cubic-bezier(0.895, 0.03, 0.685, 0.22) infinite alternate;
+}
+.card11{
+  top: 40%;
+  left: 50%;
+  animation: floaty 2s cubic-bezier(0.165, 0.84, 0.44, 1) infinite alternate;
+}
+.card12{
+  top: 55%;
+  left: 40%;
+  animation: floaty 2s cubic-bezier(0.55, 0.085, 0.68, 0.53) infinite alternate;
+}
+.card13{
+  top: 75%;
+  left: 15%;
+  animation: floaty 2s cubic-bezier(0.6, 0.04, 0.98, 0.335) infinite alternate-reverse;
+}
+.card14{
+  top: 70%;
+  left: 33%;
+  animation: floaty 2s cubic-bezier(0.33, 0.7, 0.45, 1) infinite alternate-reverse;
+}
+.card15{
+  top: 90%;
+  left: 30%;
+  animation: floaty 2s cubic-bezier(0.215, 0.61, 0.355, 1) infinite alternate-reverse;
+}
+
+
+
+
+
+
