@@ -10,7 +10,7 @@
     padding: 4rem 5vw;
     text-align: center;
   }
-  .narrative-card {
+  #section4-narrative-card , .narrative-card{
     max-width: 90%;
   }
   .card {
@@ -51,10 +51,16 @@
   #section2-narrative-card{
     right: 5%;
   }
+  #section4-narrative-card{
+    right: 5%;
+  }
   .decoration-line-red {
     transform: translateX(90px) translateY(-250px);
   }
   .decoration-line-blue{
     transform: translateX(-110px) translateY(20px);
+  }
+  #section4::before{
+    background: none;
   }
 }
