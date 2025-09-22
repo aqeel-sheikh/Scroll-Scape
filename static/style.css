@@ -5,15 +5,6 @@
   font-weight: normal;
   font-style: normal;
 }
-@font-face {
-  font-family: "orbitron";
-  src: url("./fonts/orbitron/orbitron-variablefont_wght-webfont.woff2")
-      format("woff2"),
-    url("./fonts/orbitron/orbitron-variablefont_wght-webfont.woff")
-      format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
 *,
 *::before,
 *::after {
@@ -27,7 +18,6 @@
 body {
   line-height: 1.5;
   overflow-x: hidden;
-  -webkit-font-smoothing: antialiased;
   background: linear-gradient(135deg, #fafcfd, #e0e0e0, #dedede);
   font-family: poppins, monospace, system-ui, -apple-system, BlinkMacSystemFont,
     "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
@@ -527,32 +517,38 @@ header {
 #section5 {
 background: linear-gradient(135deg, #fafcfd, #e0e0e0, #dedede);
 }
+.contain{
+  position: absolute;
+}
 #section5-narrative-card {
-  border: 1px solid rgba(255, 255, 255, 0.342);
-  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
-  background: rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(10px);
-  border-radius: 12px;
   padding: 1.5rem 2rem;
-  max-width: 650px;
-  margin: 0 auto;
+  max-width: 520px;
+  margin: 50px auto;
   font-size: 1.15rem;
   line-height: 1.6;
   color: #111;
-  z-index: 1;
+  
+  border: 1px solid rgb(247, 245, 245);
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.1));
+  backdrop-filter: blur(10px);
+  overflow: hidden;
+  position: relative;
+  border-radius: 12px; 
+  text-align: left; 
+  box-shadow: inset 5px 5px 20px rgba(255, 255, 255, 0.1), 0px 4px 20px rgba(0, 0, 0, 0.1);
+  animation: shimmy 6s ease-in-out infinite;
 }
-.vision-horizon {
+#section5-narrative-card-text {
+  margin-top: 0;
+  font-family: Oswald, sans-serif, poppins;
+}
+.shine {
+  width: 1000px;
+  height: 100px;
+  margin-left: -100px;
+  transform: rotate(30deg);
+  background: linear-gradient(to bottom, transparent, rgba(255, 255, 255, 0.473), transparent);
   position: absolute;
-  bottom: 25%;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background: linear-gradient(
-    90deg,
-    transparent,
-    rgba(255, 255, 255, 0.6),
-    transparent
-  );
-  filter: blur(2px);
-  z-index: 0;
+  animation: shine 6s ease-in-out infinite;
+  pointer-events: none; 
 }

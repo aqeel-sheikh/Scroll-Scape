@@ -63,3 +63,19 @@
 .rotateBack{
   animation: rotateBack .5s 1 both;
 }
+@keyframes shimmy {
+  0%, 100% {
+    transform: rotateY(0deg) skewX(0deg);
+  }
+  50% {
+    transform: rotateY(30deg) skewX(3deg);
+  }
+}
+@keyframes shine {
+  0%, 100% {
+    margin-top: -100px;
+  }
+  50% {
+    margin-top: 400px; 
+  }
+}
