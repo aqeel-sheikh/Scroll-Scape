@@ -2,9 +2,9 @@ gsap.registerPlugin(ScrollTrigger);
 gsap.defaults({ ease: "none", duration: 2 });
 
 const tl = gsap.timeline();
-tl.from("#section3", { xPercent: -100 })
-  .from("#section4", { xPercent: 100 })
-  .from("#section5", { yPercent: -100 });
+tl.from("#section3", { yPercent: 100 })
+  .from("#section4", { yPercent: -100 })
+  .from("#section5", { yPercent: 100 });
 
 ScrollTrigger.create({
   animation: tl,
