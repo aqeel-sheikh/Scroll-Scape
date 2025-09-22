@@ -149,12 +149,10 @@ h6 {
   left: 0;
   padding: 30px;
   text-shadow: 2px 4px 4px rgba(0, 0, 0, 0.2);
+  animation: fadeIn .5s 1;
 }
 header {
   position: relative;
-
-  view-timeline-name: --headerView;
-  view-timeline-axis: block;
 }
 #lottie-container {
   position: absolute;
@@ -164,9 +162,9 @@ header {
   width: 150px;
   height: 50px;
 }
-
 #section1-title {
   position: absolute;
+  animation: fadeIn .5s 1;
 }
 #section1-tagline {
   position: absolute;
@@ -174,13 +172,7 @@ header {
   text-shadow: 2px 4px 4px rgba(0, 0, 0, 0.2);
   transform: translateY(50px);
   z-index: -1;
-
-  animation-name: fadeOutLinks;
-  animation-timeline: --headerView;
-  animation-timing-function: linear;
-  animation-duration: 1ms;
-  animation-fill-mode: forwards;
-  animation-range: entry 100% exit 70%;
+  animation: fadeIn 1s 1;
 }
 .social-links {
   position: absolute;
@@ -190,15 +182,8 @@ header {
   gap: 2rem;
   padding: 30px;
   opacity: 1;
-
-  animation-name: fadeOutLinks;
-  animation-timeline: --headerView;
-  animation-timing-function: linear;
-  animation-duration: 1ms;
-  animation-fill-mode: forwards;
-  animation-range: entry 100% exit 30%;
+  animation: fadeIn 1.5s 1;
 }
-
 .social-links img {
   width: 24px;
 }
@@ -208,7 +193,6 @@ header {
   background: url(./images/section2/cloud.png) repeat-x;
   background-position: 0 bottom;
   background-size: auto 350px;
-
   animation: moveBg 100s linear infinite alternate;
 }
 /* narrative card */
@@ -252,16 +236,10 @@ header {
 .decoration-line-red::after {
   top: 0;
   background: red;
-  animation: lineGrowDown linear both;
-  animation-range: entry 0% cover 50%;
-  animation-timeline: view();
 }
 .decoration-line-blue::after {
   bottom: 0;
   background: blue;
-  animation: lineGrowUp linear both;
-  animation-range: entry 0% cover 50%;
-  animation-timeline: view();
 }
 
 /* Section 3 - The Struggles */
@@ -563,18 +541,6 @@ background: linear-gradient(135deg, #fafcfd, #e0e0e0, #dedede);
   line-height: 1.6;
   color: #111;
   z-index: 1;
-}
-#section5::before {
-  content: "";
-  position: absolute;
-  top: 35%;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 600px;
-  height: 600px;
-  background: radial-gradient(circle, rgba(112, 142, 224, 0.4), transparent 70%);
-  border-radius: 50%;
-  filter: blur(100px);
 }
 .vision-horizon {
   position: absolute;
