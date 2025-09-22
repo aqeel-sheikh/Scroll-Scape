@@ -182,7 +182,6 @@ header {
   gap: 2rem;
   padding: 30px;
   opacity: 1;
-  animation: fadeIn 1.5s 1;
 }
 .social-links img {
   width: 24px;

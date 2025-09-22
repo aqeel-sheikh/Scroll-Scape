@@ -37,6 +37,19 @@ function onScroll() {
 window.addEventListener("scroll", onScroll, { passive: true });
 onScroll();
 
+const socialLinkImgs = document.querySelectorAll(".socialLink")
+
+socialLinkImgs.forEach(img =>{
+  img.addEventListener("mouseenter", ()=> {
+    img.classList.remove("rotateBack")
+    img.classList.add("rotate")
+  })
+  img.addEventListener("mouseleave", ()=> {
+    img.classList.remove("rotate")
+    img.classList.add("rotateBack")
+  })
+})
+
 // Section 4 - The Rise
 const card = document.getElementById("section4-narrative-card");
 
