@@ -548,7 +548,7 @@ header {
 }
 /* Section 5 - The Vision */
 #section5 {
-background: linear-gradient(to right, #f0f2f0, #000c40);
+background: linear-gradient(135deg, #fafcfd, #e0e0e0, #dedede);
 }
 #section5-narrative-card {
   border: 1px solid rgba(255, 255, 255, 0.342);
