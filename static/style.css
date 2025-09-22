@@ -297,22 +297,24 @@ header {
   border: 1px solid rgba(255, 255, 255, 0.06);
   box-shadow: 0 7px 4px rgba(0, 0, 0, 0.1);
 }
-#section3 .card::before{
+.card::before {
   content: "";
   position: absolute;
   left: 0;
   bottom: 0;
   height: 0;
   width: 100%;
-  background: #ff0000;
   transition: all 0.3s ease;
   border-radius: 8px;
   z-index: 1;
 }
-#section3 .card:hover::before{
+#section3 .card::before {
+  background: #ff0000;
+}
+.card:hover::before {
   height: 100%;
 }
-#section3 .card:hover{
+#section3 .card:hover {
   color: #fff;
   font-weight: 600;
   box-shadow: 2px 2px 50px rgba(255, 0, 0, 0.5);
@@ -324,14 +326,15 @@ header {
   color: #fff;
   background: #272626;
   cursor: pointer;
-  box-shadow: 2px 2px 50px rgba(255, 0, 0, 0.1), 4px 10px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 2px 2px 50px rgba(255, 0, 0, 0.1),
+    4px 10px 10px rgba(0, 0, 0, 0.2);
 }
-#section3-narrative-card::after{
+#section3-narrative-card::after {
   content: "";
   position: absolute;
   inset: -2px;
   border-radius: 7px;
-  background: conic-gradient(from var(--angle), red , #272626, red);
+  background: conic-gradient(from var(--angle), red, #272626, red);
   animation: movingBorder 3s linear infinite;
   z-index: -1;
 }
@@ -415,11 +418,25 @@ header {
 }
 
 /* Section 4 - The Rise */
+#section4 {
+  color: #f5f5f5;
+  background: linear-gradient(135deg, #1a1b1b, #1a1b1b);
+}
 
+#section4::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at top center,
+    rgba(207, 143, 40, 0.822),
+    transparent 70%
+  );
+  pointer-events: none;
+}
 .section4-tagline {
-  color: #7e7c7c;
+  color: #ccc49fa6;
   text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.2);
-  transform: translateY(80px);
   line-height: 2;
   font-family: monospace;
 }
@@ -432,12 +449,48 @@ header {
 .section4-tagline3 {
   transform: translateY(300px);
 }
-
 #section4 .card {
-  color: #000000;
-  right: 0;
-  /* animation: stairFloaty 2s ease-in-out alternate infinite; */
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(6px);
+  border-radius: 12px;
+  padding: 6px 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #ffffffaf;
 }
+#section4 .card::before {
+  background: rgba(255, 157, 0, 0.822);
+}
+#section4 .card:hover {
+  color: #fff;
+  font-weight: 600;
+  box-shadow: 2px 2px 50px rgba(255, 157, 0, 0.822);
+}
+#section4-narrative-card {
+  background: linear-gradient(135deg, #3b3939, #161616);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  padding: 20px 28px;
+  max-width: 420px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  cursor: crosshair;
+  transform-style: preserve-3d;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+  perspective: 1000px;
+}
+
+#section4-narrative-card:hover {
+  box-shadow: 2px 2px 20px rgb(0, 0, 0);
+}
+
+#section4-narrative-card-text span {
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  transform: translateZ(50px);
+}
+#section4-narrative-card:hover #section4-narrative-card-text span {
+  text-shadow: 0px 14px 7px rgba(0, 0, 0, 0.5);
+}
+
 .Rcard1 {
   bottom: 5%;
   left: 3%;
@@ -492,9 +545,6 @@ header {
   animation-delay: 16s;
 }
 
-#section4 {
-  background: purple;
-}
 #section5 {
   background: orange;
 }
