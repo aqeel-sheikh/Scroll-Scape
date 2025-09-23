@@ -1,81 +1,102 @@
-🌌 My Journey – A Story Told in Code
+# SCROLL SCAPE 🎢
 
-A storytelling web project that visualizes my journey into coding — from struggles to small wins to building a vision for the future.
+## 🌌 My Journey – A Story Told in Code  
 
-This isn’t just a static site — it’s designed like a narrative, with sections that reflect different stages of growth, styled with gradients, animated cards, and smooth transitions.
+A storytelling web project that visualizes my journey into coding — from struggles to small wins to building a vision for the future.  
 
-📸 Preview
+This isn’t just a static site — it’s designed like a narrative, with sections that reflect different stages of growth, styled with gradients, animated cards, and smooth transitions.  
 
-![alt text](./screenshots/image.png)
-![alt text](./screenshots/image2.png)
 
-🚀 Live Demo
+## 📸 Preview  
 
-([👉 View Live Project](https://scroll-scape.netlify.app/)
+![Preview 1](./screenshots/image.png)  
+![Preview 2](./screenshots/image2.png)  
 
-🎨 Features
+## 🚀 Live Demo  
 
-✨ Multi-section storytelling design: The Beginning, The Struggles, The Rise, The Vision.
+👉 [View Live Project](https://scroll-scape.netlify.app/)  
 
-🌈 Custom gradients and glowing effects for each section.
 
-🎭 Animated narrative cards that reinforce the story.
 
-📱 Responsive layout for different screen sizes.
+## 🎨 Features  
 
-⚡ Built with HTML, CSS, Vanilla JavaScript and GSAP — no frameworks.
+- ✨ **Multi-section storytelling design**: *The Beginning, The Struggles, The Rise, The Vision*  
+- 🌈 **Custom gradients & glowing effects** for each section  
+- 🎭 **Animated narrative cards** that reinforce the story  
+- 📱 **Responsive layout** across all screen sizes  
+- ⚡ **No frameworks** — built with pure HTML, CSS, JavaScript & GSAP  
 
-🛠 Tech Stack
+---
 
-HTML5
+## 🛠 Tech Stack  
 
-CSS3 (gradients, animations, backdrop blur)
+- **HTML5**  
+- **CSS3** (gradients, animations, backdrop blur)  
+- **JavaScript (Vanilla)** – for interactions  
+- **GSAP** – scroll animations  
 
-JavaScript (interactions)
+---
 
-GSAP (Scroll animations)
+## 📂 Project Structure  
 
-📂 Project Structure
+
+```
 SCROLL-SCAPE/
 ├── assets/
-│ └── animations/
-│ └── scrollDownAnimation.json
+│   └── animations/
+│       └── scrollDownAnimation.json
 │
 ├── js/
-│ ├── lottie.js
-│ └── script.js
+│   ├── lottie.js         # Lottie animations
+│   └── script.js         # Main interactions & scroll logic
+│
+├── screenshots/          # Project screenshots
 │
 ├── static/
-│ ├── fonts/
-│ └── images/
+│   ├── fonts/            # Project fonts
+│   └── images/           # Images & graphics
 │
-├── animation.css
-├── responsive.css
-├── style.css
+├── animation.css         # Animation-specific styles
+├── responsive.css        # Responsive adjustments
+├── style.css             # Base styling
 │
-├── index.html
+├── index.html            # Main entry point
 ├── LICENSE
 └── README.md
 
-💡 Why This Project?
+```
 
-This project represents my coding journey.
-It’s more than a simple app — it’s a creative experiment that combines design, storytelling, and frontend skills in one place.
+---
 
-I wanted to build something that not only tests my technical skills but also reflects who I am as a developer.
+## 💡 Why This Project?  
 
-⚡ How to Run Locally
+This project represents **my coding journey**.  
+It’s more than a simple app — it’s a creative experiment that combines **design, storytelling, and frontend skills** in one place.  
 
-Clone the repo
+I wanted to build something that not only tests my technical abilities but also reflects **who I am as a developer**.  
 
-git clone https://github.com/aqeel-sheikh/Scroll-Scape.git
+---
+## 🔮 Future Improvements  
 
+Here are a few ideas I might add later:  
+- 🌘 **Dark mode toggle** for a smoother night-time reading experience   
+- 🖼️ **More sections** as my coding journey continues  
+- 🌀 **More advanced GSAP animations** (parallax, scroll-triggered effects)
 
-Open index.html in your browser.
+## ⚡ How to Run Locally  
 
-📬 Contact
+1. Clone the repo:  
+   ```bash
+   git clone https://github.com/aqeel-sheikh/Scroll-Scape git
+   ```
+2. Open `index.html` in your browser.
+
+---
+
+## 📬 Contact
 
 If you’d like to connect or collaborate:
-📧 sheikhakeelw01@gmail.com
 
- | X(🐦) @aqeell.sheikh
+* 📧 **Email**: [sheikhakeelw01@gmail.com](mailto:sheikhakeelw01@gmail.com)
+* 🐦 **Twitter (X)**: [@aqeell.sheikh](https://x.com/aqeell_sheikh)
+
